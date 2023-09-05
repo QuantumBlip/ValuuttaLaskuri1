@@ -16,12 +16,11 @@ export default function App() {
       <Text>Eurot</Text>
       <TextInput placeholder='Enter amount of euros' 
       keyboardType='decimal-pad'
-      value={eurot}
-      onChangeText={text => setEurot(text)}
+      value={eurot} onChangeText={text => setEurot(text)}
       style={styles.field}
       />
       <Text style={styles.field}>Kruuna</Text>
-      <Text style={styles.field}>{kruunat}</Text>
+      <Text style={styles.field}>{kruunat.toFixed(2)}</Text>
       <Button title='Laske' onPress={calculate}/>
       
     </View>
